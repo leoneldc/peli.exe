@@ -1,0 +1,202 @@
+@import url("../../App.css");
+
+.container-login {
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.form-modal {
+  margin: 15px;
+  max-width: 450px;
+  border-radius: 20px;
+}
+.form-modal button {
+  font-size: 1em;
+  z-index: 2;
+  transition: 0.2s;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  text-transform: capitalize;
+}
+.form-modal, .form-modal button, #login-toggle{
+  background: var(--background);
+}
+.form-modal .btn {
+  border-radius: 20px;
+  font-size: 1.2em;
+  padding: 0.8em 1em 0.8em 1em !important;
+  transition: 0.5s;
+  border: 1px solid #ebebeb;
+  margin-bottom: 0.5em;
+  margin-top: 0.5em;
+  border: none;
+  font-weight: bold;
+}
+.form-modal .login,
+.form-modal .signup {
+  background: var(--bg-btn-login);
+  color: var(--text-primary);
+}
+.form-modal .login:hover,
+.form-modal .signup:hover {
+  background: var(--bg-btn-hover-login);
+}
+.form-toggle {
+  width: 100%;
+  position: relative;
+  height: auto;
+}
+.form-toggle button {
+  width: 50%;
+  padding: .8em;
+  margin-bottom: 1.5em;
+  transition: 0.2s;
+  font-size: 1.1em;
+  float: left;
+  border: none;
+  font-weight: bold;
+}
+.form-toggle button:nth-child(1) {
+  border-bottom-right-radius: 20px;
+}
+.form-toggle button:nth-child(2) {
+  border-bottom-left-radius: 20px;
+}
+#login-toggle {
+  border-top-left-radius: 20px;
+}
+#signup-toggle {
+  border-top-right-radius: 20px;
+  background: var(--bg-btn-login);
+}
+#login-toggle, #signup-toggle{
+  color: var(--text-primary);
+}
+.form-modal form {
+  width: 90%;
+  left: 50%;
+  transform: translateX(-50%);
+  height: auto;
+  position: relative;
+}
+#login-form,
+#signup-form {
+  width: 100%;
+  position: relative;
+  height: auto;
+}
+#signup-form {
+  display: none;
+}
+#login-form button,
+#signup-form button {
+  width: 100%;
+  margin-top: 0.5em;
+  padding: 0.6em;
+}
+.form-modal input {
+  width: 100%;
+  font-size: 1em;
+  padding: 1.2em 1.7em 1.2em 1.7em;
+  margin-top: 0.6em;
+  margin-bottom: 0.6em;
+  border-radius: 20px;
+  transition: 0.5s;
+  background: var(--background-3);
+  color: var(--text-primary);
+  border: none;
+  outline: none;
+  font-weight: bold;
+}
+.form-modal input:focus,
+.form-modal input:active {
+  transform: scaleX(1.05);
+}
+.form-modal input::-webkit-input-placeholder {
+  color: var(--text-primary);
+}
+.form-modal p {
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--text-primary);
+}
+.form-modal p a {
+  color: var(--text-link);
+  text-decoration: none;
+  transition: 0.2s;
+}
+.form-modal p a:hover {
+  color: var(--text-link-entry);
+}
+.form-modal i {
+  left: 10%;
+  top: 50%;
+  transform: translateX(-10%) translateY(-50%);
+  position: absolute;
+}
+
+@media only screen and (max-width: 500px) {
+  .form-modal {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  i {
+    display: none !important;
+  }
+}
+.wrapper {
+  display: flex;
+  justify-content: center;
+}
+#hide-checkbox {
+  display: none;
+}
+.toggle {
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  width: 50px;
+  height: 25px;
+  background: var(--bg-btn-theme);
+  border-radius: 50px;
+  transition: 500ms;
+  overflow: hidden;
+}
+.toggle-button {
+  position: absolute;
+  display: inline-block;
+  top: 5.5px;
+  left: 5px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #faeaf1;
+  overflow: hidden;
+  box-shadow: 0 0 35px 4px rgba(255, 255, 255);
+  transition: all 400ms ease-out;
+}
+#hide-checkbox:checked + .toggle .toggle-button {
+  background: var(--background);
+  transform: translateX(25px);
+  box-shadow: 0 0 35px 5px rgba(255, 255, 255);
+}
+@keyframes move {
+  0% {
+    transform: none;
+  }
+  25% {
+    transform: translateX(2px);
+  }
+  100% {
+    transform: translateX(-10px);
+  }
+}

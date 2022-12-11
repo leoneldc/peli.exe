@@ -1,0 +1,6 @@
+export const all = '/'
+export const login = '/login'
+export const home = '/home'
+export const logout = '/logout'
+export const error404 = '/notFound'
+export const notfound = '*'
